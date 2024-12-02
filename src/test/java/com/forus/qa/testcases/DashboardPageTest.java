@@ -91,6 +91,18 @@ public class DashboardPageTest extends TestBase {
             Assert.assertTrue(isPopupVisible, "Withdraw popup/modal did not appear.");
             System.out.println("Withdraw popup/modal appeared successfully.");
 
+            // Step 9: Enter the withdrawal amount
+            System.out.println("Step 9: Entering the withdrawal amount...");
+            String amountToWithdraw = "10"; // Set the amount want to test
+            dashboardPage.enterAmountToWithdraw(amountToWithdraw); // Call the method to enter the amount
+            System.out.println("Withdrawal amount entered successfully.");
+
+            // Step 10: Assert or verify the entered amount
+            System.out.println("Step 10: Verifying the entered withdrawal amount...");
+            String enteredAmount = dashboardPage.getEnteredAmount(); // Implement this if needed
+            Assert.assertEquals(enteredAmount, amountToWithdraw, "The entered amount does not match the expected value!");
+            System.out.println("Entered amount verified successfully.");
+
         } catch (Exception e) {
             System.err.println("Test execution failed due to an error: " + e.getMessage());
             Assert.fail("Test case failed due to an exception: " + e.getMessage());
