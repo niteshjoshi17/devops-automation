@@ -31,9 +31,8 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//button[@type='button'][1]")
     WebElement changeLanguageToEnglish;
 
-    // No need for @FindBy here for OTP because we will dynamically get all input fields
-    // @FindBy(xpath = "//input[@aria-label='Please enter your pin code']")
-    // WebElement enterOTP;
+    @FindBy(xpath = "//input[@aria-label='Please enter your pin code']")
+   public WebElement enterOTP;
 
     // Initializing Page Objects:
     public LoginPage() {
@@ -71,10 +70,10 @@ public class LoginPage extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         //Change language from Arabic to English:
-       if (changeLanguageToEnglish.isDisplayed()) {
-           wait.until(ExpectedConditions.elementToBeClickable(changeLanguageToEnglish)) ;
-           changeLanguageToEnglish.click();
-       }
+        if (changeLanguageToEnglish.isDisplayed()) {
+            wait.until(ExpectedConditions.elementToBeClickable(changeLanguageToEnglish)) ;
+            changeLanguageToEnglish.click();
+        }
 
 
         // Wait for the email field to be visible and enter email

@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73710748-bbe9-4041-92bb-289e6872faf4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/base/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/config/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/DashboardPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/PortfolioPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/WalletPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/util/TestUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/LoginPageTest.java" afterDir="false" />
+    <list default="true" id="73710748-bbe9-4041-92bb-289e6872faf4" name="Changes" comment="Enter amount to withdraw">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/WalletPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/DashboardPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/DashboardPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/LoginPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +27,40 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;niteshjoshi17&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/niteshjoshi17/devops-automation.git&quot;,
+    &quot;accountId&quot;: &quot;5428ab32-e26e-46a2-b023-009d3c6af12c&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;niteshjoshi17&quot;,
+    &quot;repository&quot;: &quot;devops-automation&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/WalletPageTest.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -52,28 +75,53 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DashboardPageTest.completeFlowTest.executor": "Run",
+    "TestNG.DashboardPageTest.executor": "Run",
+    "TestNG.DashboardPageTest.loginAndOtpTest.executor": "Run",
     "TestNG.LoginPageTest (1).executor": "Run",
+    "TestNG.LoginPageTest (2).executor": "Run",
     "TestNG.LoginPageTest.executor": "Run",
-    "git-widget-placeholder": "master",
+    "TestNG.LoginPageTest.loginPageTitleTest.executor": "Debug",
+    "TestNG.LoginPageTest.loginTest.executor": "Run",
+    "TestNG.WalletPageTest.executor": "Run",
+    "git-widget-placeholder": "#1 on Dashboard/Deposit-01",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginPageTest">
-    <configuration name="LoginPageTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.WalletPageTest">
+    <configuration name="DashboardPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ForusTestAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.forus.qa.testcases.*" />
+          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.LoginPageTest" />
+      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.DashboardPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashboardPageTest.completeFlowTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ForusTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.DashboardPageTest" />
+      <option name="METHOD_NAME" value="completeFlowTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -84,7 +132,7 @@
       <module name="ForusTestAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.forus.qa.testcases.*" />
+          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,10 +145,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginPageTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ForusTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.LoginPageTest" />
+      <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WalletPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ForusTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.forus.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.WalletPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.WalletPageTest" />
+      <item itemvalue="TestNG.DashboardPageTest.completeFlowTest" />
+      <item itemvalue="TestNG.LoginPageTest (2)" />
+      <item itemvalue="TestNG.LoginPageTest.loginTest" />
+      <item itemvalue="TestNG.DashboardPageTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginPageTest" />
-        <item itemvalue="TestNG.LoginPageTest (1)" />
+        <item itemvalue="TestNG.WalletPageTest" />
+        <item itemvalue="TestNG.DashboardPageTest" />
+        <item itemvalue="TestNG.DashboardPageTest.completeFlowTest" />
+        <item itemvalue="TestNG.LoginPageTest (2)" />
+        <item itemvalue="TestNG.LoginPageTest.loginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +206,58 @@
       <option name="presentableId" value="Default" />
       <updated>1732287406796</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Deposit flow">
+      <option name="closed" value="true" />
+      <created>1732804354673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732804354673</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Withdraw Button">
+      <option name="closed" value="true" />
+      <created>1733137703221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733137703221</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Enter amount to withdraw">
+      <option name="closed" value="true" />
+      <created>1733139897324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733139897324</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c6cb28c1-e5b6-47cc-bf88-a8647375725b" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="c6cb28c1-e5b6-47cc-bf88-a8647375725b">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Deposit flow" />
+    <MESSAGE value="Added Withdraw Button" />
+    <MESSAGE value="Enter amount to withdraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enter amount to withdraw" />
   </component>
 </project>
