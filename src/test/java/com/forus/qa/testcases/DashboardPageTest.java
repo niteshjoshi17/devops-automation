@@ -17,7 +17,7 @@ public class DashboardPageTest extends TestBase {
 
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
-    private WebDriverWait wait; // WebDriverWait instance
+    private WebDriverWait wait;
 
     @BeforeMethod
     public void setup() {
@@ -39,12 +39,11 @@ public class DashboardPageTest extends TestBase {
             Assert.assertTrue(loginPage.loginBtnClick(), "Login button click failed!");
             System.out.println("Login successful.");
 
-            // Step 2: Wait for the OTP input to appear
+            // Step 2: Wait for the OTP input to appear for login
             System.out.println("Step 2: Waiting for OTP input field...");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//input[@aria-label='Please enter your pin code']")));
+            wait.until(ExpectedConditions.visibilityOf(loginPage.enterOTP));
 
-            // Step 3: Handle OTP
+            // Step 3: Handle OTP for login
             System.out.println("Step 3: Handling OTP...");
             String otp = "010101"; // Replace with dynamic OTP retrieval logic if available
             loginPage.handleOtp(otp);
@@ -93,15 +92,33 @@ public class DashboardPageTest extends TestBase {
 
             // Step 9: Enter the withdrawal amount
             System.out.println("Step 9: Entering the withdrawal amount...");
-            String amountToWithdraw = "10"; // Set the amount want to test
+            String amountToWithdraw = "10"; // Set the amount you want to test
             dashboardPage.enterAmountToWithdraw(amountToWithdraw); // Call the method to enter the amount
             System.out.println("Withdrawal amount entered successfully.");
 
             // Step 10: Assert or verify the entered amount
             System.out.println("Step 10: Verifying the entered withdrawal amount...");
-            String enteredAmount = dashboardPage.getEnteredAmount(); // Implement this if needed
+            String enteredAmount = dashboardPage.getEnteredAmount();
             Assert.assertEquals(enteredAmount, amountToWithdraw, "The entered amount does not match the expected value!");
             System.out.println("Entered amount verified successfully.");
+
+            // Step 11: Confirm withdrawal
+            System.out.println("Step 11: Confirming withdrawal...");
+            Thread.sleep(2000);
+            dashboardPage.confirmWithdraw();
+            Thread.sleep(2000);
+            System.out.println("Withdrawal confirmed successfully.");
+
+            // Step 12: Handle OTP for withdrawal confirmation
+            System.out.println("Step 12: Handling OTP for withdrawal confirmation...");
+            wait.until(ExpectedConditions.visibilityOf(loginPage.enterOTP));
+
+            String withdrawalOtp = "010101"; // Enter OTP
+
+            loginPage.handleOtp(withdrawalOtp); // Reusing the same method for OTP input
+            Thread.sleep(2000);
+
+            System.out.println("OTP for withdrawal handled successfully.");
 
         } catch (Exception e) {
             System.err.println("Test execution failed due to an error: " + e.getMessage());
