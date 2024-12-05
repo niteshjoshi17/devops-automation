@@ -12,7 +12,7 @@ public class WalletPage {
 
     WebDriver driver;
 
-    // Locators for Dashboard elements using @FindBy
+    // Locators for Wallet elements using @FindBy
     @FindBy(xpath = "//a[contains(@class, 'chakra-link') and .//p[text()='إعدادات']]")
     private WebElement settingsLink;
 

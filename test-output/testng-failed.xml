@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ForusTestAutomation(failed)">
+<suite name="ForusTestAutomation Suite" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ForusTestAutomation">
     <classes>
-      <class name="com.forus.qa.testcases.LoginPageTest">
+      <!-- Add AnalyticsTest class -->
+      <class name="com.forus.qa.testcases.AnalyticsTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="completeFlowTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.forus.qa.testcases.LoginPageTest -->
+      </class> <!-- com.forus.qa.testcases.AnalyticsTest -->
+
+      <!-- Add WalletPageTest class -->
+      <class name="com.forus.qa.testcases.WalletPageTest">
+        <methods>
+          <include name="walletTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.forus.qa.testcases.WalletPageTest -->
     </classes>
-  </test> <!-- ForusTestAutomation(failed) -->
-</suite> <!-- Failed suite [Default Suite] -->
+  </test> <!-- ForusTestAutomation -->
+</suite> <!-- ForusTestAutomation Suite -->

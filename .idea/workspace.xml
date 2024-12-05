@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73710748-bbe9-4041-92bb-289e6872faf4" name="Changes" comment="Enter amount to withdraw">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="73710748-bbe9-4041-92bb-289e6872faf4" name="Changes" comment="Updated DashboardPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/base/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/WalletPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/DashboardPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/DashboardPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/WalletPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/forus/qa/pages/WalletPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/LoginPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/WalletPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/forus/qa/testcases/WalletPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,9 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG./home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/testng.xml.executor": "Run",
+    "TestNG.<default>.executor": "Run",
+    "TestNG.AnalyticsTest.executor": "Run",
     "TestNG.DashboardPageTest.completeFlowTest.executor": "Run",
     "TestNG.DashboardPageTest.executor": "Run",
     "TestNG.DashboardPageTest.loginAndOtpTest.executor": "Run",
@@ -84,15 +84,33 @@
     "TestNG.LoginPageTest.loginPageTitleTest.executor": "Debug",
     "TestNG.LoginPageTest.loginTest.executor": "Run",
     "TestNG.WalletPageTest.executor": "Run",
-    "git-widget-placeholder": "#1 on Dashboard/Deposit-01",
+    "git-widget-placeholder": "Wallet-Page-Flow",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.WalletPageTest">
+  <component name="RunManager" selected="TestNG./home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/testng.xml">
+    <configuration name="AnalyticsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ForusTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.forus.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.AnalyticsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DashboardPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ForusTestAutomation" />
       <extension name="coverage">
@@ -104,59 +122,6 @@
       <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
       <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.DashboardPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DashboardPageTest.completeFlowTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ForusTestAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.DashboardPageTest" />
-      <option name="METHOD_NAME" value="completeFlowTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ForusTestAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.LoginPageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginPageTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ForusTestAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.forus.qa.testcases.DashboardPageTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.forus.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="com.forus.qa.testcases.LoginPageTest" />
-      <option name="METHOD_NAME" value="loginTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -180,20 +145,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ForusTestAutomation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="TestNG./home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/testng.xml" />
+      <item itemvalue="TestNG.&lt;default&gt;" />
+      <item itemvalue="TestNG.AnalyticsTest" />
       <item itemvalue="TestNG.WalletPageTest" />
-      <item itemvalue="TestNG.DashboardPageTest.completeFlowTest" />
-      <item itemvalue="TestNG.LoginPageTest (2)" />
-      <item itemvalue="TestNG.LoginPageTest.loginTest" />
       <item itemvalue="TestNG.DashboardPageTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./home/user/IdeaProjects/ForusTestAutomation/ForusTestAutomation/testng.xml" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.AnalyticsTest" />
         <item itemvalue="TestNG.WalletPageTest" />
         <item itemvalue="TestNG.DashboardPageTest" />
-        <item itemvalue="TestNG.DashboardPageTest.completeFlowTest" />
-        <item itemvalue="TestNG.LoginPageTest (2)" />
-        <item itemvalue="TestNG.LoginPageTest.loginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733139897324</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated DashboardPage">
+      <option name="closed" value="true" />
+      <created>1733244756287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733244756287</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +253,7 @@
     <MESSAGE value="Added Deposit flow" />
     <MESSAGE value="Added Withdraw Button" />
     <MESSAGE value="Enter amount to withdraw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enter amount to withdraw" />
+    <MESSAGE value="Updated DashboardPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated DashboardPage" />
   </component>
 </project>

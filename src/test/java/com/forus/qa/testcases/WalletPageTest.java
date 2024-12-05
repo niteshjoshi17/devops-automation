@@ -17,7 +17,7 @@ import java.time.Duration;
 public class WalletPageTest extends TestBase {
 
     private LoginPage loginPage;
-    private DashboardPage dashboardPage;
+  //  private DashboardPage dashboardPage;
     private WalletPage walletPage;
     private WebDriverWait wait;
 
@@ -26,7 +26,7 @@ public class WalletPageTest extends TestBase {
         // Initialize WebDriver and open the browser
         initialization();
         loginPage = new LoginPage(); // Initialize LoginPage
-        dashboardPage = new DashboardPage(driver); // Initialize DashboardPage
+       // dashboardPage = new DashboardPage(driver); // Initialize DashboardPage
         walletPage = new WalletPage(driver); // Initialize WalletPage
         wait = new WebDriverWait(driver, Duration.ofSeconds(15)); // Initialize WebDriverWait
     }
