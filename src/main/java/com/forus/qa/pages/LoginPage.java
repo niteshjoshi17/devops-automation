@@ -22,6 +22,9 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//input[@type='password']")
     WebElement password;
 
+    @FindBy(xpath = "//div[@class='css-en-1m8iww1']")
+    WebElement eyeBtn;
+
     @FindBy(xpath = "//button[@type='submit']")
     WebElement loginBtn;
 
@@ -31,14 +34,8 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//button[@type='button'][1]")
     WebElement changeLanguageToEnglish;
 
-    // No need for @FindBy here for OTP because we will dynamically get all input fields
-    // @FindBy(xpath = "//input[@aria-label='Please enter your pin code']")
-    // WebElement enterOTP;
-
     // Initializing Page Objects:
     public LoginPage() {
-
-
         PageFactory.initElements(driver, this);
         ensureLanguageIsEnglish();
     }
@@ -58,76 +55,63 @@ public class LoginPage extends TestBase {
         }
     }
 
-    // Actions:
-    public String validateLoginPageTitle() {
-        return driver.getTitle();
-    }
-
-    public boolean validateForusLogo() {
-        return forusLogo.isDisplayed();
-    }
-
-    public boolean login(String em, String pwd) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        //Change language from Arabic to English:
-       if (changeLanguageToEnglish.isDisplayed()) {
-           wait.until(ExpectedConditions.elementToBeClickable(changeLanguageToEnglish)) ;
-           changeLanguageToEnglish.click();
-       }
-
-
-        // Wait for the email field to be visible and enter email
-        wait.until(ExpectedConditions.visibilityOf(email));
-        email.sendKeys(em);
-
-        // Scroll to the password field and enter password
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", password);
-        password.sendKeys(pwd);
-
-        // Click the login button
-        return loginBtnClick();
-    }
-
-    public boolean loginBtnClick() {
+    public boolean login(String em, String pwd) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         try {
-            // Wait until button is clickable
-            wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+            // Step 1: Wait and enter email
+            wait.until(ExpectedConditions.visibilityOf(email));
+            email.sendKeys(em);
 
-            // Ensure the button is visible and click it
+            // Step 2: Scroll to password and enter it
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", password);
+            password.sendKeys(pwd);
+
+            // Optional: Click eye button to show password
+            eyeBtn.click();
+            Thread.sleep(1000);
+
+            // Step 3: Click login button (try normal click first)
+            wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
             loginBtn.click();
             return true;
-        } catch (Exception e) {
-            System.out.println("Click failed. Using JavaScript: " + e.getMessage());
 
-            // Use JavaScript:
+        } catch (Exception e) {
+            System.out.println("Login click failed, trying JavaScript: " + e.getMessage());
+
+            // Step 4: Retry with JavaScript click
             try {
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", loginBtn);
                 return true;
-            } catch (Exception jsException) {
-                System.out.println("JavaScript click failed: " + jsException.getMessage());
+            } catch (Exception jsEx) {
+                System.out.println("JavaScript click also failed: " + jsEx.getMessage());
                 return false;
             }
         }
+
+
+}
+
+    @FindBy(xpath = "//input[@aria-label='Please enter your pin code']")
+    private List<WebElement> otpInputFields;
+
+    public List<WebElement> getOtpInputFields() {
+        return otpInputFields;
     }
+
+
 
     // Handle OTP input after login
     public void handleOtp(String otp) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Wait for OTP input fields to be visible (find all input fields with the same aria-label)
-        wait.until(ExpectedConditions.visibilityOfAllElements(driver.findElements(By.xpath("//input[@aria-label='Please enter your pin code']"))));
+        // Wait until OTP input fields are visible
+        wait.until(ExpectedConditions.visibilityOfAllElements(otpInputFields));
 
-        // Find all OTP input fields (this returns a List of WebElements)
-        List<WebElement> otpInputFields = driver.findElements(By.xpath("//input[@aria-label='Please enter your pin code']"));
-
-        // We have exactly 6 OTP input fields
+        // Check for exactly 6 OTP fields
         if (otpInputFields.size() == 6) {
-            // Loop through each digit of the OTP (fixed 6 digits)
             for (int i = 0; i < otp.length(); i++) {
                 otpInputFields.get(i).sendKeys(String.valueOf(otp.charAt(i)));
             }
@@ -136,4 +120,5 @@ public class LoginPage extends TestBase {
             System.out.println("Error: The number of OTP input fields is not correct.");
         }
     }
+
 }

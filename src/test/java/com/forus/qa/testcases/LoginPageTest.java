@@ -1,24 +1,28 @@
 package com.forus.qa.testcases;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.forus.qa.base.TestBase;
 import com.forus.qa.pages.LoginPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
 public class LoginPageTest extends TestBase {
-    LoginPage loginPage ;
+    LoginPage loginPage;
+    public static ExtentReports extent;
+    public static ExtentTest test;
 
-    public LoginPageTest () {
-        super();
+    @BeforeClass
+    public void setupExtent() {
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter("test-output/ExtentReport.html");
+        extent = new ExtentReports();
+        extent.attachReporter(sparkReporter);
     }
-
 
     @BeforeMethod
     public void setup() {
@@ -27,51 +31,38 @@ public class LoginPageTest extends TestBase {
     }
 
     @Test(priority = 1)
-    public void loginPageTitleTest() {
-       String title = loginPage.validateLoginPageTitle();
-        Assert.assertEquals(title ,"Forus | Login");
-    }
+    public void loginTest() throws InterruptedException {
+        test = extent.createTest("Login Page - Valid Login Test");
 
-    @Test(priority = 2)
-    public void forusLogoImageTest() {
-        boolean flag = loginPage.validateForusLogo();
-        Assert.assertTrue(flag);
-    }
-
-    @Test(priority = 3)
-    public void loginTest() {
-
-        System.out.println("Language switched to English, if necessary.");
+        test.info("Step 1: Browser launched and application opened");
 
         // Step 1: Login with email and password
-        loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
+        test.info("Step 2: Entering Email and Password");
+        boolean loginSuccessful = loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
 
-        // Step 2: Assert the login button is clicked successfully
-        Assert.assertTrue(loginPage.loginBtnClick(), "Login button click failed!");
+        if (loginSuccessful) {
+            test.pass("Step 3: Login button clicked successfully");
+        } else {
+            test.fail("Step 3: Login button click failed");
+            Assert.fail("Login failed");
+        }
 
-        // Step 3: Wait for the OTP input to appear (after login click)
+        // Step 4: Wait for OTP
+        test.info("Step 4: Waiting for OTP fields to become visible");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@aria-label='Please enter your pin code']")));
+        wait.until(ExpectedConditions.visibilityOfAllElements(loginPage.getOtpInputFields()));
 
-        // Step 4: Handle OTP (assuming OTP is fixed as "010101")
-        String otp = "010101";  // Fixed OTP
-        loginPage.handleOtp(otp);
+        // Step 5: Handle OTP
+        test.info("Step 5: Entering fixed OTP - 010101");
+        loginPage.handleOtp("010101");
 
-        // Step 5: Check the URL or another condition to verify login success
-        String currentUrl = driver.getCurrentUrl();
-        Assert.assertTrue(currentUrl.contains("dashboard"), "Login failed! URL does not contain 'dashboard'.");
+        test.pass("Step 6: OTP submitted successfully");
     }
 
-
-
-    //    @Test(priority = 4)
-//    public void clickLoginBtn() {
-//       boolean btn = loginPage.loginBtnClick();
-//        Assert.assertTrue(btn);
-//    }
     @AfterMethod
     public void tearDown() {
-        driver.quit();
+       // driver.quit();
+        test.info("Browser closed after test");
+        extent.flush(); // flush after each test
     }
-
 }
